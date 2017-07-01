@@ -33,14 +33,22 @@ class TabContentPage{
 
 @Component({
   template: `
-  <ion-tabs>
-    <ion-tab tabIcon="contact" [root]="rootPage"></ion-tab>
-    <ion-tab tabIcon="compass" [root]="rootPage"></ion-tab>
-    <ion-tab tabIcon="analytics" [root]="rootPage"></ion-tab>
-  </ion-tabs>`
+  <ion-header>
+    <ion-navbar>
+      <ion-title>Heart</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content>Tab 1</ion-content>`
 })
-class TabIconsPage{
-  constructor() {
-    this.rootPage = TabContentPage;
-  }
-}
+export class Tab1 {}
+
+@Component({
+  template: `
+  <ion-header>
+    <ion-navbar>
+      <ion-title>Star</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content>Tab 2</ion-content>`
+})
+export class Tab2 {}
