@@ -7,7 +7,7 @@ import { Adventurer } from '../classes/adventurer';
 export class AdventurerService{
 
     private headers = new Headers({'Accept': 'application/json', 'Content-Type': 'application/json'});
-    private url = 'http://lowcost-env.v9mpr7bkgz.us-west-2.elasticbeanstalk.com/';
+    private url = 'http://lowcost-env.v9mpr7bkgz.us-west-2.elasticbeanstalk.com:8080/adventurers';
 
     constructor(public http: Http){} 
  
@@ -44,7 +44,7 @@ export class AdventurerService{
     }
      
     update(adventurer: Adventurer): Promise<Adventurer> {
-        const url = `${this.url}/${adventurer.getId}`;
+        const url = `${this.url}/${adventurer.id}`;
         return this.http
         .put(url, JSON.stringify(adventurer), {headers: this.headers})
         .toPromise()

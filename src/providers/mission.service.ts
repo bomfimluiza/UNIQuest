@@ -9,7 +9,7 @@ import 'rxjs/add/operator/toPromise';
 export class MissionService{
 
     private headers = new Headers({'Accept': 'application/json', 'Content-Type': 'application/json'});
-    private url = 'http://lowcost-env.v9mpr7bkgz.us-west-2.elasticbeanstalk.com/';
+    private url = 'http://lowcost-env.v9mpr7bkgz.us-west-2.elasticbeanstalk.com:8080/missions';
 
     constructor(public http: Http){} 
  
@@ -46,7 +46,7 @@ export class MissionService{
     }
      
     update(mission: Mission): Promise<Mission> {
-        const url = `${this.url}/${mission.getId}`;
+        const url = `${this.url}/${mission.id}`;
         return this.http
         .put(url, JSON.stringify(mission), {headers: this.headers})
         .toPromise()

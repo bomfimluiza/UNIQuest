@@ -25198,3 +25198,48 @@ ion-navbar.toolbar {
     padding-top: calc(16px + 20px);
   }
 }
+
+page-profile .avatar-frame {
+  border: 2px solid purple;
+}
+
+page-profile .avatar-frame, page-profile .avatar-frame img {
+  width: 45px;
+  height: 45px;
+  /* Saf3+, Chrome */
+  border-radius: 30px;
+  /* Opera 10.5, IE 9 */
+  /*-moz-border-radius: 30px;  Disabled for FF1+ */
+}
+
+page-profile .UNIpurple {
+  color: purple;
+}
+
+page-profile .UNIlevel {
+  color: purple;
+  margin-top: -10px;
+  margin-bottom: -2px;
+}
+
+page-profile .UNIskills {
+  margin-top: -3px;
+}
+
+page-profile .UNIdiv {
+  width: 100%;
+}
+
+page-profile .UNItitle {
+  margin-top: 10px;
+}
+
+page-profile .UNItag {
+  border-radius: 3px;
+  border: 1px solid purple;
+}
+
+page-profile .UNIavatar {
+  margin-top: -15px;
+  width: auto;
+}

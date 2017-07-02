@@ -7,7 +7,7 @@ import { Achievement } from '../classes/achievement';
 export class AchievementService{
 
     private headers = new Headers({'Accept': 'application/json', 'Content-Type': 'application/json'});
-    private url = 'http://lowcost-env.v9mpr7bkgz.us-west-2.elasticbeanstalk.com/';
+    private url = 'http://lowcost-env.v9mpr7bkgz.us-west-2.elasticbeanstalk.com:8080/achievements';
 
     constructor(public http: Http){} 
  
@@ -44,7 +44,7 @@ export class AchievementService{
     }
      
     update(achievement: Achievement): Promise<Achievement> {
-        const url = `${this.url}/${achievement.getId}`;
+        const url = `${this.url}/${achievement.id}`;
         return this.http
         .put(url, JSON.stringify(achievement), {headers: this.headers})
         .toPromise()
